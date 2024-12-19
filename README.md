@@ -1,1 +1,1 @@
-# rest-example
+S'ha creat en el user Service BBDD una ruta que reb la denuncia, en format de text, i la mostra per consola, s'ha fet així per simplificar i no haver de crear la classe Denunciar en el servidor ja que és una cosa prevista a futur. Un cop dit això, ha estat possible fer tot el mínim i només quedaría fer  (fora del mínim 2, de cara a una entrega final) la connexió amb la bbdd i la creació de la classe denunciar en el servidor, així com el desplegament a producció.
