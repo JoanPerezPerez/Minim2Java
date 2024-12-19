@@ -559,4 +559,23 @@ public class UserServiceBBDD {
             return Response.status(506).build();
         }
     }
+    @POST
+    @ApiOperation(value = "Post A Denuncia", notes = "hello")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Successful", response = Void.class),
+            @ApiResponse(code = 500, message = "Error"),
+            @ApiResponse(code = 506, message = "User Not logged in yet"),
+    })
+    @Path("/denuncia")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response PostDenuncia(@CookieParam("authToken") String authToken, String message) {
+
+        try {
+            logger.info("Petición recibida: " + message);
+            return Response.status(201).build();
+        } catch (Exception ex) {
+            return Response.status(500).build();
+        }
+    }
 }
